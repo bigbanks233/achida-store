@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achida Stores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/custom.css">
+    <link rel="stylesheet" href="plugins/plugins.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.ico">
+<script>
+        // Simple JavaScript to demonstrate functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.order_btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // In a real implementation, you might want to track this event
+                    console.log('WhatsApp order button clicked for: ' + this.previousElementSibling.previousElementSibling.textContent);
+                });
+            });
+        });
+
+    </script>
+
+    <style>    
+    
+	</style>
+</head>
+<body>
+    <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                                <a href="index.html"><img src="images/logo.png" alt="logo" width="50px" style="margin-left: -25px;"></a>
+                            </div>
+                            <nav>
+                                <ul id="MenuItems">
+                                    <li><a href="index.html" style="color:antiquewhite">Home</a></li>
+                                    <li><a href="products.html" style="color:antiquewhite">Products</a></li>
+                                    <li><a href="#" style="color:antiquewhite">About</a></li>
+                                    <li><a href="#" style="color:antiquewhite">Contact</a></li>
+                                    <!--<li><a href="account.html">Account</a></li>-->
+                                </ul>
+                            </nav>
+                            <!--<a href="cart.html"><img src="images/cart.png" width="30px" height="35px"></a>-->
+                            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                        </div>
+                <!-- javascript -->
+            
+                <script>
+var MenuItems = document.getElementById("MenuItems");
+MenuItems.style.maxHeight = "0px";
+function menutoggle() {
+if (MenuItems.style.maxHeight == "0px") {
+MenuItems.style.maxHeight = "200px"
+}
+else {
+      MenuItems.style.maxHeight = "0px"
+                        }
+                    }
+// Add a simple effect when the search button is clicked
+document.querySelector('.search-button').addEventListener('click', function(e) {
+e.preventDefault();
+            const searchInput = document.querySelector('.search-input');
+            
+            if (searchInput.value.trim() === '') {
+                // Shake animation if search is empty
+                searchInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    searchInput.style.animation = '';
+                }, 500);
+            } else {
+                // In a real application, you would submit the search here
+                alert(`Searching for: ${searchInput.value}`);
+            }
+        });
+        
+        // Add CSS for shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                20%, 60% { transform: translateX(-5px); }
+                40%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);					
+                </script>
+            
+                
+                <h1 class="heading_one"><b style="color:#F9DC7C;">A.A Achida</b> Cosmetic Dealership</h1>
+            </div>
+    <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for anything...">
+                <button class="search-button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature">
+                <i class="fa fa-shopping-cart"></i>
+                <h3>Easy Ordering</h3>
+                <p>Smooth & modern AI powered ordering system for your special needs </p>
+            </div>
+            <div class="feature">
+                <i class="fa fa-paper-plane"></i>
+                <h3>Quick Delivery</h3>
+                <p>We deliver your package speedily anywhere around Nigeria. </p>
+            </div>
+            <div class="feature">
+                <i class="fa fa-comment"></i>
+                <h3>Direct Chat</h3>
+                <p>Chat directly with the store support for any inquiries</p>
+            </div>
+        </div>
+
+        <!--<div class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Browse Products</h3>
+                    <p>Explore our collection of products</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Select Item</h3>
+                    <p>Choose the product you want to order</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Order via WhatsApp</h3>
+                    <p>Click the order button to send product info via WhatsApp</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Confirm Order</h3>
+                    <p>Confirm your order and delivery details in the chat</p>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="products/perfume_1.jpg" alt="Wireless Headphones">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sahebat Al-jamal Perfume</h3>
+                    <p class="product-description">Premium and rich fragrance, with long lasting effects.</p>
+                    <p class="product-price">&#x20A6 25,000.00</p>
+                    <a href="https://wa.me/1234567890?text=I%20want%20to%20order%20Wireless%20Headphones%20for%20$89.99" class="order_btn" target="_blank">
+                        <i></i> Place Order
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="products/perfume_2.jpg" alt="Cat-2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Berries Weekend</h3>
+                    <p class="product-description">Soft alluring unisex fragrance.</p>
+                    <p class="product-price">&#x20A6 25,000.00</p>
+                    <a href="https://wa.me/1234567890?text=I%20want%20to%20order%20Smart%20Watch%20for%20$129.99" class="order_btn" target="_blank">
+                        <i></i> Place Order
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="products/product_3.jpg" alt="Bluetooth Earbuds">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Suger Body Spray</h3>
+                    <p class="product-description">A premium package of smelling good.</p>
+                    <p class="product-price">&#x20A6 25,000.00</p>
+                    <a href="https://wa.me/1234567890?text=I%20want%20to%20order%20Bluetooth%20Earbuds%20for%20$59.99" class="order_btn" target="_blank">
+                        <i></i> Place Order
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Portable Speaker">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Portable Speaker</h3>
+                    <p class="product-description">Powerful sound in a compact, waterproof design perfect for outdoor adventures.</p>
+                    <p class="product-price">$79.99</p>
+                    <a href="https://wa.me/1234567890?text=I%20want%20to%20order%20Portable%20Speaker%20for%20$79.99" class="order_btn" target="_blank">
+                         Order Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=1234567890&text=Hello%20Achida%20Cosmetics!" class="whatsapp-button" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="p-footer">A.A Achida - The simplest way to shop!</p>
+            <p class="p-footer">Copyright © 2025 A.A Achida. All rights reserved.</p><br><br>
+            <div class="social-icons">
+                <a href="web.facebook.com"><i class="fa fa-facebook" style="margin-right: 20px;"></i></a>
+                <a href="instagram.com"><i class="fa fa-instagram" style="margin-right: 20px;"></i></a>
+                <a href="instagram.com"><i class="fa fa-twitter" style="margin-right: 20px;"></i></a>
+            </div>
+            <p class="p-trademark">Powered by Anvil Technologies&#8482</p>
+            
+        </div>
+    </footer>
+
+    </body>
+</html>
